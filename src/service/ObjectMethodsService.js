@@ -1,12 +1,24 @@
 class ObjectMethodsService {
+  // constructor(name, age){
+  //   this.name = name;
+  //   this.age = age;
+  // }
   getEnhancedObject(rawObject) {
     // TODO: return an enhanced object implementing `valueOf` or `toString` depending on the context
-    return null;
+    rawObject.valueOf = function (){
+      return this.age;
+    }
+    return rawObject
   }
 
   getEnhancedObject2(rawObject) {
     // TODO: return an enhanced object implementing `valueOf` or `toString` depending on the context
-    return null;
+    const obj = rawObject
+    obj.toString = function (){
+      const msg = `[name="${rawObject.name}",age=${rawObject.age}]`
+      return msg
+    }
+    return rawObject;
   }
 
   getEnhancedObjectWithoutValueOfOrToString(rawObject) {

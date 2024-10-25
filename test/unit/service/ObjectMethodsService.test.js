@@ -16,7 +16,7 @@ describe('ObjectMethodsService Suite Tests', () => {
     service = new ObjectMethodsService();
   });
 
-  it("should consider only the object 'age' when coercing it to a number", () => {
+  it("should consider only the object 'age' when coercing it to a number", () => {9
     const rawObject = Object.create(MOCK_OBJECT);
 
     const object = service.getEnhancedObject(rawObject);
